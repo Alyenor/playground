@@ -1,0 +1,82 @@
+//纯三角形
+.triangle{
+  width: 0;
+  height: 0;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #0BDCBA transparent;
+}
+
+//箭头
+.tri-arrow{
+  border: 6px solid #0BDCBA;
+  width: 30px;
+  height: 30px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.up{
+  transform: rotate(-135deg);
+}
+
+.down{
+  transform: rotate(45deg);
+}
+
+.left{
+  transform: rotate(135deg);
+}
+
+.right{
+  transform: rotate(-45deg);
+}
+
+//tab bar
+.bar-item-first{
+  border-radius: 4px 0 0 4px;
+
+  &:after{
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #C2DDB2;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.bar-item{
+  &:before{
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #FDFDF5;
+    position: absolute;
+    left: 0px;
+    top: 0;
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #C2DDB2;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.active{
+  background-color: #0BDCBA;
+  &:after{
+    border-left-color: #0BDCBA;
+  }
+}

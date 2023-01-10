@@ -4,19 +4,22 @@ import {BackToMenuButton} from "@/components";
 
 const initHelmet: IHelmet = {
   isRoot: false,
-  title: "about",
+  title: "modal",
 }
 
-const AboutPage = () => {
+const ModalPage = () => {
   const [helmet] = useState(initHelmet)
 
   return  <MainLayout header helmet={helmet}>
-    <div className=''>
-     ABOUT
+    <div className='flex flex-col items-center px-40'>
+      <div className=''>
+        component
+      </div>
+      <BackToMenuButton />
     </div>
-    <BackToMenuButton />
+
   </MainLayout>
 }
 
-const About= React.memo(AboutPage)
-export default About
+const Modal= React.memo(ModalPage)
+export default Modal

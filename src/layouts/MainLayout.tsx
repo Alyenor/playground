@@ -3,7 +3,9 @@ import {Layout} from 'antd';
 import Helmet from 'react-helmet';
 import {Header, Footer} from '@/components/index';
 
-const {Content,} = Layout;
+import './index.less'
+
+const {Content} = Layout;
 
 export interface ILayoutProps {
   children: ReactNode;
@@ -31,7 +33,7 @@ export const MainLayout = (props: ILayoutProps) => {
   }, [helmet]);
 
   return (
-    <Layout className="mainLayout">
+    <Layout>
       <div>
         <Helmet>
           <html lang="en" />
@@ -40,7 +42,12 @@ export const MainLayout = (props: ILayoutProps) => {
         </Helmet>
       </div>
       {header && <Header />}
-      <Content>{children}</Content>
+      <Content>
+        {helmet.isRoot
+          ? children
+          : <div className='px-4 py-6 bg-light-100 layout-body'>{children}</div>
+        }
+      </Content>
       <Footer />
     </Layout>
   );

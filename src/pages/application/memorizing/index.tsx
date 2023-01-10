@@ -2,21 +2,26 @@ import React, {useState} from 'react'
 import {IHelmet, MainLayout} from "@/layouts/MainLayout";
 import {BackToMenuButton} from "@/components";
 
+import './index.less'
+
 const initHelmet: IHelmet = {
   isRoot: false,
-  title: "about",
+  title: "memorizing",
 }
 
-const AboutPage = () => {
+const MemorizingPage = () => {
   const [helmet] = useState(initHelmet)
 
   return  <MainLayout header helmet={helmet}>
-    <div className=''>
-     ABOUT
+    <div className='flex flex-col items-center px-40'>
+      <div className=''>
+        component
+      </div>
+      <BackToMenuButton />
     </div>
-    <BackToMenuButton />
+
   </MainLayout>
 }
 
-const About= React.memo(AboutPage)
-export default About
+const Naming= React.memo(MemorizingPage)
+export default Naming

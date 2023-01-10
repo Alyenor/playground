@@ -8,7 +8,6 @@ export default defineConfig({
     extend: {
       colors: {
         main: {
-          pink: '#FFD8D2',
           yellow: '#EDDB8A',
         },
         teal: {
@@ -22,6 +21,9 @@ export default defineConfig({
         },
         dark:{
           400:'#3E371D'
+        },
+        pink:{
+          100:'#FFD8D2'
         }
       },
     },
